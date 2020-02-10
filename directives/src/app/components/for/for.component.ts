@@ -11,6 +11,8 @@ export class ForComponent implements OnInit {
   students: object[];
   color: string;
   fontSize: string;
+  useTData: boolean;
+  classObj: object;
 
   constructor() { 
     this.courses = ["Angular", "React", "Node"];
@@ -28,6 +30,10 @@ export class ForComponent implements OnInit {
     ];
     this.color = "green";
     this.fontSize = "40"
+    this.useTData = true;
+    this.classObj = {
+      tdata: this.useTData
+    };
   }
 
   ngOnInit(): void {

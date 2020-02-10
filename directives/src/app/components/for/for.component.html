@@ -14,6 +14,6 @@
     <tr *ngFor="let s of students">
         <td [style.background-color]="'red'">{{s.fname}}</td>
         <td [style.color]="color">{{s.lname}}</td>
-        <td [style.color]="color">{{s.age}}</td>
+        <td [style.color]="color" [ngClass]="classObj">{{s.age}}</td>
     </tr>
 </table>
