@@ -7,25 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  id:number;
-  name:string;
-  price:number;
+  products: Object[];
   constructor() { 
-    this.id = 1;
-    this.name = "ROG";
-    this.price =1300;
+    this.products = [
+      {
+        "id":"1",
+        "name":"Mackbook Pro"
+      },
+      {
+        "id": "2",
+        "name":"ROG"
+      }
+    ];
   }
 
-  public getId():number{
-    return this.id;
-  }
-
-  public getName():string{
-    return this.name;
-  }
-
-  public getPrice():number{
-    return this.price;
+  public getProducts() {
+    return this.products;
   }
 
   ngOnInit(): void {
