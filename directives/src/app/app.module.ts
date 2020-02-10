@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { IfComponent } from './components/if/if.component';
+import { SwitchComponent } from './components/switch/switch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IfComponent
+    IfComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule
