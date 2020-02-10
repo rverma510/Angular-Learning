@@ -9,6 +9,9 @@ export class ForComponent implements OnInit {
 
   courses: string[];
   students: object[];
+  color: string;
+  fontSize: string;
+
   constructor() { 
     this.courses = ["Angular", "React", "Node"];
     this.students = [
@@ -22,7 +25,9 @@ export class ForComponent implements OnInit {
         lname: "Pathak",
         age: 21
       }
-    ]
+    ];
+    this.color = "green";
+    this.fontSize = "40"
   }
 
   ngOnInit(): void {

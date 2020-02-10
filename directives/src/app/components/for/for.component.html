@@ -6,14 +6,14 @@
 <table>
     <thead>
         <tr>
-            <td>First Name</td>
+            <td [ngStyle]="{'color':color, 'font-size.px':fontSize}">First Name</td>
             <td>Last Name</td>
             <td>Age</td>
         </tr>
     </thead>
     <tr *ngFor="let s of students">
-        <td>{{s.fname}}</td>
-        <td>{{s.lname}}</td>
-        <td>{{s.age}}</td>
+        <td [style.background-color]="'red'">{{s.fname}}</td>
+        <td [style.color]="color">{{s.lname}}</td>
+        <td [style.color]="color">{{s.age}}</td>
     </tr>
 </table>
