@@ -1,0 +1,18 @@
+<div *ngFor="let c of courses">
+    <b>{{c}}</b>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Age</td>
+        </tr>
+    </thead>
+    <tr *ngFor="let s of students">
+        <td>{{s.fname}}</td>
+        <td>{{s.lname}}</td>
+        <td>{{s.age}}</td>
+    </tr>
+</table>
