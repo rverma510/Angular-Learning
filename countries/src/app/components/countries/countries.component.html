@@ -1,5 +1,5 @@
-<table>
-    <thead>
+<table border="1" cellspacing="5px" cellpadding="5x" align="enter" style="font-size:20px">
+    <thead style="background-color: grey;">
         <tr>
             <th>Name</th>
             <th>Capital</th>
@@ -11,7 +11,7 @@
         <tr *ngFor="let c of data">
             <td>{{c.name}}</td>
             <td>{{c.capital}}</td>
-            <td><img src="{{c.flag}}"/></td>
+            <td><img width="100px" height="50px" src="{{c.flag}}"/></td>
             <td>{{c.currencies[0].code}}</td>
         </tr>
 
