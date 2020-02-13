@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HelloServiceService } from '../../services/hello-service.service';
+import { CustomerServiceService } from '../../services/customer-service.service';
 
 @Component({
   selector: 'app-multiple-services',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultipleServicesComponent implements OnInit {
 
-  constructor() { }
+  public res1: any;
+  public res2: any;
+
+  constructor(private hello:HelloServiceService, private customer:CustomerServiceService) { }
 
   ngOnInit(): void {
+    this.hello.helloService().subcribe(res => this.res1 = res);
+    this.customer.getCustomers().subcribe(res => this.res2 = res);
   }
 
 }
