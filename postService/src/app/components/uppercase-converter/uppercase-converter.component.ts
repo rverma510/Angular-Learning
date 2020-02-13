@@ -11,7 +11,7 @@ export class UppercaseConverterComponent implements OnInit {
 
   private result: any;
 
-  constructor(private _serice:UppercaseConverterService) { }
+  constructor(private _service:UppercaseConverterService) { }
 
   ngOnInit(): void {
   }

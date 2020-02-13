@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UppercaseConverterComponent } from './components/uppercase-converter/uppercase-converter.component';
+import { UppercaseConverterService } from './services/uppercase-converter.service';
+import { FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -10,9 +13,11 @@ import { UppercaseConverterComponent } from './components/uppercase-converter/up
     UppercaseConverterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UppercaseConverterService],
+  bootstrap: [UppercaseConverterComponent]
 })
 export class AppModule { }
