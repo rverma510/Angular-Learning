@@ -9,6 +9,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class UppercaseConverterComponent implements OnInit {
 
+  private result: any;
+
   constructor(private _serice:UppercaseConverterService) { }
 
   ngOnInit(): void {
