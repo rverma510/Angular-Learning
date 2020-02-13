@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HelloServiceService } from '../../services/hello-service.service';
 import { CustomerServiceService } from '../../services/customer-service.service';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-multiple-services',
@@ -15,8 +16,11 @@ export class MultipleServicesComponent implements OnInit {
   constructor(private hello:HelloServiceService, private customer:CustomerServiceService) { }
 
   ngOnInit(): void {
-    this.hello.helloService().subscribe(res => this.res1 = res);
-    this.customer.getCustomers().subscribe(res => this.res2 = res);
+    forkJoin([this.hello.helloService(), this.customer.getCustomers()])
+      .subscribe(Response => {
+        this.res1 = Response[0],
+          this.res2 = Response[1];
+      });
   }
 
 }
