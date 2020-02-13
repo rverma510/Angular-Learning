@@ -15,8 +15,8 @@ export class MultipleServicesComponent implements OnInit {
   constructor(private hello:HelloServiceService, private customer:CustomerServiceService) { }
 
   ngOnInit(): void {
-    this.hello.helloService().subcribe(res => this.res1 = res);
-    this.customer.getCustomers().subcribe(res => this.res2 = res);
+    this.hello.helloService().subscribe(res => this.res1 = res);
+    this.customer.getCustomers().subscribe(res => this.res2 = res);
   }
 
 }
