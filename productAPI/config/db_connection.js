@@ -1,11 +1,13 @@
 var dbProps = require("./db_properties");
 var mysql = require("mysql");
 
-getConnection: ()=>{
-    return mysql.createConnection({
-        host:dbProps.host,
-        user:dbProps.user,
-        password:dbProps.password,
-        database:dbProps.dbName
-    });
+module.exports{
+    getConnection: ()=>{
+        return mysql.createConnection({
+            host:dbProps.host,
+            user:dbProps.user,
+            password:dbProps.password,
+            database:dbProps.dbName
+        });
+    }
 }
