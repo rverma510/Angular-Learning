@@ -1,2 +1,27 @@
 <h1>Products</h1>
 <h1>{{products | json}}</h1>
+
+<h1>Create Product</h1>
+Id : <input type="number" [(ngModel)]="id1"/><br/>
+Name : <input type="text" [(ngModel)]="name1"/><br/>
+Description : <input type="text" [(ngModel)]="description1"/><br/>
+Price : <input type="number" [(ngModel)]="price1"/><br/>
+<button (click)="createProduct({'id':id1, 'name':name1, 'description':description1, 'price':price1})">Create</button>
+<h1>{{createResponse | json}}</h1>
+
+<h1>Update Product</h1>
+Id : <input type="number" [(ngModel)]="id2"/><br/>
+Name : <input type="text" [(ngModel)]="name2"/><br/>
+Price : <input type="number" [(ngModel)]="price2"/><br/>
+<button (click)="updateProduct({'id':id2, 'name':name2, 'price':price2})">Update</button>
+<h1>{{updateResponse | json}}</h1>
+
+<h1>Delete Product</h1>
+Id : <input type="number" [(ngModel)]="id3"/><br/>
+<button (click)="deleteProduct(id3)">Delete</button>
+<h1>{{deleteResponse | json}}</h1>
+
+<h1>Fetch Product</h1>
+Id : <input type="number" [(ngModel)]="id4"/><br/>
+<button (click)="getProductById(id4)">Fetch</button>
+<h1>{{getProductResponse | json}}</h1>

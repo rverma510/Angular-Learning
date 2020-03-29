@@ -14,6 +14,10 @@ export class ProductDataService {
     return this.httpClient.get(this.url);
   }
 
+  public getProductById(id:number):any{
+    return this.httpClient.get(this.url+id);
+  }
+
   public create(product):any{
     return this.httpClient.post(this.url, product);
   }
