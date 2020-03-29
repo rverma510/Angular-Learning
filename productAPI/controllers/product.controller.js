@@ -7,3 +7,16 @@ connection.connect();
 var express = require("express");
 
 var router = express.Router();
+
+router.get("/", (req, res)=>{
+    connection.query("select * from product", (err, records, fields)=>{
+        if(err){
+            console.error("Error while fetching data");
+        }
+        else{
+            res.send(records);
+        }
+    })
+}); 
+
+module.exports = router;

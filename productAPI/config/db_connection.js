@@ -1,7 +1,7 @@
 var dbProps = require("./db_properties");
 var mysql = require("mysql");
 
-module.exports{
+module.exports = {
     getConnection: ()=>{
         return mysql.createConnection({
             host:dbProps.host,
