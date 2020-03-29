@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductDataService } from '../../services/product-data.service'
 
 @Component({
   selector: 'app-update',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateComponent implements OnInit {
 
-  constructor() { }
+  public id:number;
+  public name:string;
+  public price:number;
+  public updateResponse:any;
+
+  constructor(private service:ProductDataService) { }
 
   ngOnInit(): void {
+  }
+
+  public updateProduct(product:any){
+    this.service.update(product).subscribe(res=>{
+      this.updateResponse = res
+    });
   }
 
 }
