@@ -12,4 +12,5 @@ export class AppComponent {
   myObj = {name:"John",
           salary:10000};
   myNumber:number = 1000.12345;
+  stock:number = 3.5532;
 }
