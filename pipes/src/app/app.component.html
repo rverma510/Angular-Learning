@@ -1,3 +1,11 @@
+<b *ngFor="let v of numbers | slice:2">
+  {{v}}
+</b>
+
+<h1>{{numbers | slice:2:4}}</h1>
+
+<h1>{{numbers | slice:-5:-2}}</h1>
+
 <h1>{{stock}}</h1>
 
 <h1>{{stock | percent:'3.1-2'}}</h1>

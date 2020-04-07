@@ -13,4 +13,5 @@ export class AppComponent {
           salary:10000};
   myNumber:number = 1000.12345;
   stock:number = 3.5532;
+  numbers:number[] = [10, 20, 30, 40, 50];
 }
