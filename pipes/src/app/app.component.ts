@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'RAghav';
   myDate:Date = new Date();
+  myMoney:number = 200;
 }
