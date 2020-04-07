@@ -9,4 +9,6 @@ export class AppComponent {
   title = 'RAghav';
   myDate:Date = new Date();
   myMoney:number = 200;
+  myObj = {name:"John",
+          salary:10000};
 }
